@@ -1,0 +1,123 @@
+@import "mixins";
+
+.about_member {
+  @include member;
+}
+
+.sm_heading.name {
+  font-size: 1.2em;
+}
+
+@media (max-width: 1200px) {
+  .about_member {
+    .membership {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .about_member {
+    .membership {
+      padding: 50px 20px;
+
+      &_text {
+        grid-template-columns: 1fr;
+
+        button {
+          margin-left: 0px;
+        }
+      }
+    }
+  }
+}
+
+.economy {
+  &_grid {
+    .arrow {
+      li {
+        display: flex;
+
+        .text {
+          padding-top: 12px;
+          padding-left: 6px;
+        }
+      }
+    }
+  }
+}
+
+.team {
+  background: url(./images/team.png) no-repeat center center;
+  .team_body {
+    @include latest;
+  }
+}
+
+@media (max-width: 718px) {
+  .team {
+    background: url(./images/team.png) repeat top left;
+    .team_body {
+      width: 70%;
+      margin: auto;
+    }
+  }
+}
+
+.board {
+  width: 80%;
+  margin: 100px auto;
+
+  .number_cards {
+    @include number_cards;
+    grid-gap: 10px 10px !important;
+
+    .bold {
+      margin-bottom: 10px;
+    }
+
+    .thin {
+      color: $accent-color;
+      font-weight: 400;
+    }
+  }
+}
+
+.latest_news.hover {
+  img {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+  }
+}
+
+.latest_news.hover {
+  .card:hover {
+    img {
+      filter: none;
+      -webkit-filter: grayscale(0);
+    }
+  }
+}
+
+.other {
+  justify-content: flex-start !important;
+}
+
+.green_economy {
+  background: url(./images/greeneco.png);
+  color: white;
+  margin: 50px 0px;
+  padding: 30px 0px;
+}
+
+@media (max-width: 800px) {
+  .green_economy {
+    .img {
+      display: none;
+    }
+  }
+
+  .history {
+    display: none;
+  }
+}

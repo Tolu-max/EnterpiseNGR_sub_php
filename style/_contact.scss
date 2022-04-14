@@ -1,0 +1,148 @@
+.contact {
+  padding: 40px 30px;
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+
+    .form {
+      color: white;
+      width: 60%;
+      margin: auto;
+      background: #40ba7b;
+      border-radius: 20px;
+      padding: 20px 0 20px 20px;
+
+      .md_btn {
+        width: 90%;
+        margin: auto;
+      }
+
+      label,
+      input {
+        display: block;
+      }
+
+      label {
+        padding-bottom: 4px;
+      }
+
+      input {
+        margin-bottom: 20px;
+        padding: 5px;
+        border-radius: 5px;
+        border: none;
+      }
+
+      textarea {
+        border-radius: 5px;
+        padding: 5px;
+        font-family: "Roboto", sans-serif;
+      }
+
+      button {
+        font-family: "Roboto", sans-serif;
+        padding: 10px;
+        font-size: 0.97em;
+        font-weight: 600;
+        margin-top: 12px;
+        border-radius: 4px;
+        border: none;
+        color: #40ba7b;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .contact {
+    .grid {
+      .form {
+        width: 70%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 969px) {
+  .contact {
+    .grid {
+      grid-column-gap: 30px;
+      grid-template-columns: 1fr;
+      width: 90%;
+      margin: auto;
+      .form {
+        margin: 10px 0px;
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 758px) {
+  .contact {
+    .grid {
+      .form {
+        width: 75%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 593px) {
+  .contact {
+    padding: 40px 10px;
+    .grid {
+      .form {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.iconify.social {
+  position: relative;
+  background: transparent;
+  margin-bottom: 10px;
+}
+
+.iconify.social:hover {
+  color: #40ba7b;
+  cursor: pointer;
+}
+
+.contact_icons {
+  margin-top: 30px;
+  padding-left: 70px;
+
+  &_item {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .icon_item {
+    font-size: 1em;
+    // color: white;
+    padding-left: 10px;
+    padding-top: 5px;
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    a:hover {
+      color: #40ba7b;
+    }
+  }
+
+  .social_icons {
+    display: flex;
+    padding-top: 50px;
+
+    .item {
+      margin-right: 10px;
+    }
+  }
+}
